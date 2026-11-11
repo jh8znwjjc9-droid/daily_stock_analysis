@@ -77,8 +77,8 @@ jobs:
           EMAIL_SENDER: ${{ secrets.EMAIL_SENDER }}
           EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
           EMAIL_RECEIVERS: ${{ secrets.EMAIL_SENDER }}
-          # 可选：未来填入自选股；留空时只做 A 股大盘复盘。
-          STOCK_LIST: ${{ secrets.STOCK_LIST }}
+          # 默认分析海洋王、东方海洋；可选 Secret STOCK_LIST 可覆盖。
+          STOCK_LIST: ${{ secrets.STOCK_LIST || '002724,002086' }}
           REPORT_TYPE: full
           REPORT_SUMMARY_ONLY: 'false'
           MERGE_EMAIL_NOTIFICATION: 'true'

@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+- [改进] 个人云端日报默认分析海洋王（002724）与东方海洋（002086），沿用工作日北京时间 17:30 和完整合并邮件。
+
 - [改进] 个人 Fork 预设 gpt-6.1-sol、Tavily 免费搜索和工作日邮件大盘复盘；缺少凭据安全跳过，关闭公开报告附件及无关上游工作流，补充个人配置与免费 API 申请说明。
 
 - [文档] 恢复 README、部署指南及模型/搜索配置表中的 Anspire 可点击链接并保留推广码，继续作为 SerpAPI 后的可选搜索服务。
