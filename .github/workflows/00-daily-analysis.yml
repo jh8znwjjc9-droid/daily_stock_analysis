@@ -2,8 +2,8 @@ name: 每日股票分析
 
 on:
   schedule:
-    # 北京时间周一至周五 18:17；交易日检查会跳过休市日。
-    - cron: '17 10 * * 1-5'
+    # 北京时间周一至周五 17:30；交易日检查会跳过休市日。
+    - cron: '30 9 * * 1-5'
   workflow_dispatch:
     inputs:
       check_only:
@@ -41,7 +41,7 @@ jobs:
               output.write(f"ready={str(ready).lower()}\n")
           with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as summary:
               summary.write("## 股票日报配置检查\n\n")
-              summary.write("模型：gpt-6.1-sol；北京时间工作日 18:17。\n\n")
+              summary.write("模型：gpt-6.1-sol；北京时间工作日 17:30。\n\n")
               if missing:
                   summary.write("配置尚未填齐，本次安全跳过：不安装依赖、不调用 API、不发送邮件。\n\n")
                   summary.writelines(f"- 缺少 Secret：`{key}`\n" for key in missing)
